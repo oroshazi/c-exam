@@ -14,7 +14,7 @@ class Playlist {
 public: 
     Playlist(string b);
     Playlist(string b, vector<Song> l);
-    void dazu(const Song& s) const ;
+    void dazu(const Song& s)  ;
     void dazu(const Playlist& pl);
     int gesamtdauer() const;
     string getBez() const; 
@@ -41,9 +41,8 @@ void Playlist::printList() {
     }
 }
 
-void Playlist::dazu (const Song &s) const {    
-    this->getList().push_back((s));
-    //cout << "THISSS S:"<< s;
+void Playlist::dazu (const Song& s)  { 
+    this->list.push_back(s);
 }
 
 void Playlist::dazu(const Playlist& pl) {
